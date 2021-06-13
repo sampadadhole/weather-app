@@ -7,7 +7,7 @@ function RecentSearches(data) {
     recent = recent.split(", ");
   }
 
-  const rec = recent.slice(recent.length - 3, recent.length);
+  const rec = recent && recent.slice(recent.length - 3, recent.length);
   return (
     <Recentser>
       <RecntTag>recent searches: </RecntTag>
@@ -19,20 +19,20 @@ function RecentSearches(data) {
 export default RecentSearches;
 
 const Recentser = styled.div`
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 0 auto;
 `;
 
 const RecntTag = styled.div`
-position:relative;
-border-radius: 4px;
-background: #eeeeee;
+  position: relative;
+  border-radius: 4px;
+  background: #eeeeee;
 `;
 
 const RecentAPI = styled.div`
-position: relative;
-background: #F1E3E3;
-border-radius: 8px;
+  position: relative;
+  background: #f1e3e3;
+  border-radius: 8px;
 `;
